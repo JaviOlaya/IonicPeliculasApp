@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Observable } from 'rxjs';
+import 
 @Component({
   selector: 'app-lista-peliculas',
   templateUrl: './lista-peliculas.page.html',
