@@ -8,4 +8,5 @@ export interface interfazPeliculas{
   Actors: string;
   Poster: string;
   Type: string;
+  Language: string;
 }

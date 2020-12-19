@@ -8,7 +8,7 @@
   <ion-searchbar [(ngModel)]="term" (ionChange)="searchChanged($event)"></ion-searchbar>
   <ion-item>
     <ion-label>Selecciona el tipo de pelicula</ion-label>
-    <ion-select [(ngModel)]="type" (ionChage)="searchChanged($event)">
+    <ion-select [(ngModel)]="type" (ionChange)="searchChanged($event)">
         <ion-select-option selected="true" value="">All</ion-select-option>
         <ion-select-option value="movie">Movies</ion-select-option>
         <ion-select-option value="series">Series</ion-select-option>
@@ -17,7 +17,7 @@
   </ion-item>
 
   <ion-list>
-    <ion-item buttoon *ngFor="let pelicula of (results | async)" [routerLink]="['/', 'pelicula', pelicula.imdbID]">
+    <ion-item button *ngFor="let pelicula of (results | async)" [routerLink]="['/', 'pelicula', pelicula.imdbID]">
       <ion-avatar slot="start">
         <img src="{{pelicula.Poster}}" alt="{{pelicula.Title}}" *ngIf="pelicula.Poster != 'N/A'">
       </ion-avatar>

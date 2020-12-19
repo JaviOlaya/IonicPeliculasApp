@@ -15,8 +15,10 @@ export class DetallePeliculaPage implements OnInit {
 
   ngOnInit() {
 
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.apiPeliService.getDetails(id).subscribe(result => this.content = result);
+    let id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.apiPeliService.getDetails(id).subscribe(result => {
+      this.content = result;
+    });
   }
 
 }

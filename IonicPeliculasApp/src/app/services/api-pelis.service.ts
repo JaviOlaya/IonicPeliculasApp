@@ -7,13 +7,11 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiPelisService {
-
   private  url: string = '';
-  private apiKey: string = '660cbf6c';
+  private apiKey: string =  '660cbf6c';
 
   constructor(private http: HttpClient) { }
   
-
   searchMovies(title: string, type: string) {
     this.url = `https://www.omdbapi.com/?s=${encodeURI(title)}&type=${type}&apikey=${this.apiKey}`;
     return this.http.get<interfazPeliculas>(this.url).pipe(map(results => results['Search']));
