@@ -1,9 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>detalle_Pelicula</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons>
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{content?.Title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ion-card *ngIf="content">
+<ion-card-header text-center>
+  <ion-card-title>{{content?.Title}}</ion-card-title>
+</ion-card-header>
 
+
+</ion-card>
 </ion-content>

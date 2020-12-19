@@ -1,11 +1,11 @@
 export interface interfazPeliculas{
 
   Title: string;
-  Genre: string;
+  Genre?: string;
   ImdbRating: string;
   Year: string;
   Director: string;
-  Actor: string;
+  Actors: string;
   Poster: string;
   Type: string;
 }

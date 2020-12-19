@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-
+ 
   {
     path: '',
     redirectTo: 'lista-peliculas',
@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: 'detalle-pelicula',
     loadChildren: () => import('./pages/detalle-pelicula/detalle-pelicula.module').then( m => m.DetallePeliculaPageModule)
-  },
+  }
 ];
 
 @NgModule({
