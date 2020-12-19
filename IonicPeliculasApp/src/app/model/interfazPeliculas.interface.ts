@@ -9,4 +9,8 @@ export interface interfazPeliculas{
   Poster: string;
   Type: string;
   Language: string;
+  Runtime: string;
+  Production: string;
+  Country: string;
+  Website: string;
 }

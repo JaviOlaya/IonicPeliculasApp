@@ -3,7 +3,7 @@
     <ion-buttons slot="start"> 
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{content?.Title}}</ion-title>
+    <ion-title><strong>{{content?.Title}}</strong></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,13 +12,14 @@
 <ion-card-header text-center>
   <ion-card-title>{{content?.Title}}</ion-card-title>
   <ion-card-subtitle>
-    <p>Año :{{content.Year}} </p>
-    <p>Idiomas: {{content.Language}}</p>
+    <p>Año :{{content?.Year}} </p>
+    <p>Idiomas: {{content?.Language}}</p>
+    <p>País: {{content?.Country}}</p>
   </ion-card-subtitle>
 </ion-card-header>
 <ion-card-content>
-  <img src="{{content.Poster}}" class="info-img">
-   <p>Resumen: {{content.Plot}}</p>
+  <img src="{{content?.Poster}}" class="info-img">
+   <p id="resumen" ><strong>Resumen: </strong>{{content.Plot}}</p>
   <ion-item lines="none">
     <ion-icon name="star-half" slot="start"></ion-icon>
     <ion-label> Valoración de Imdb: {{content?.imdbRating}}
@@ -31,12 +32,22 @@
   </ion-item>
   <ion-item lines="none">
     <ion-icon name="clipboard" slot="start"></ion-icon>
+    <ion-label text-wrap> Director: {{content?.Production}}
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-icon name="clipboard" slot="start"></ion-icon>
     <ion-label text-wrap> Director: {{content?.Director}}
     </ion-label>
   </ion-item>
   <ion-item lines="none">
     <ion-icon name="people" slot="start"></ion-icon>
     <ion-label text-wrap> Actores: {{content?.Actors}}
+    </ion-label>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-icon name="clipboard" slot="start"></ion-icon>
+    <ion-label text-wrap> Web: {{content?.Website}}
     </ion-label>
   </ion-item>
 </ion-card-content>
